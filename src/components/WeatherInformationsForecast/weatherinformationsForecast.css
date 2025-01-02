@@ -1,0 +1,31 @@
+
+.forecast-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.forecast-info {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.forecast-day, .forecast-description {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
