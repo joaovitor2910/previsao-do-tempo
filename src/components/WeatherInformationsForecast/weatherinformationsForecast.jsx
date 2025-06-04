@@ -13,7 +13,7 @@ function WeatherInfosForecast({ weatherForecast }) {
             dailyForecast[date] = forecast
         }
     }
-    const next5Days = Object.values(dailyForecast).slice(0, 6)
+    const next5Days = Object.values(dailyForecast).slice(1, 6)
 
     console.log(next5Days)
 
@@ -25,7 +25,7 @@ function WeatherInfosForecast({ weatherForecast }) {
 
     return (
         <div className='forecast-container'>
-            <h3>Próximos dias</h3>
+            <h3>Próximos Dias</h3>
             <div className='forecast-list'>
                 {next5Days.map(forecast => (
                     <div className='forecast-info' key={forecast.dt}>

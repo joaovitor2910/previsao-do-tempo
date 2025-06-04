@@ -8,15 +8,16 @@ function WeatherInfos({weather}) {
     return (
         <div className="weather-container">
             <h2>{weather.name}</h2>
-            <div className="weather-infos">
+         
                 <img src={urlIcon} />
+                <p className='hoje'>Hoje</p>
                 <p className="temp">{Math.round(weather.main.temp)}°C</p>
-            </div>
+    
             <p className="description">{weather.weather[0].description}</p>
             <div className="details">
                 <p>Sensação térmica: {Math.round(weather.main.feels_like)}°C</p>
                 <p>Umidade: {weather.main.humidity}%</p>
-                <p>Pressão: {weather.main.pressure} hPa</p>
+                <p>Ventos: {Math.round(weather.wind.speed)} km/h</p>
             </div>
         </div>
     )

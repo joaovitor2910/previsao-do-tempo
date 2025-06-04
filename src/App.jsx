@@ -3,6 +3,7 @@ import './App.css'
 import axios from 'axios'
 import WeatherInfos from './components/WeatherInformations/weatherinformations'
 import WeatherInfosForecast from './components/WeatherInformationsForecast/weatherinformationsForecast'
+import Header from './components/Header'
 
 function App() {
   const [weather, setWeather] = useState()
@@ -32,14 +33,21 @@ function App() {
   }
 
   return (
+     <>
+      <Header />
       <div id='containerID' className='container'>
-        <h1>Previsão do tempo</h1>
-        <input type="text" ref={inputRef} placeholder='digite o nome da cidade' />
+        <div className='content'>
+        <h1>Previsão Do Tempo <br></br> Diária e Semanal</h1>
+        <h3>Obtenha a previsão do tempo mais recente para hoje e para os próximos dias com informações
+        atualizadas sobre temperatura, umidade e muito mais.</h3>
+        <input type="text" ref={inputRef} placeholder='Digite o nome da cidade' />
         <button onClick={searchCity}>Buscar</button>
+        </div>
 
         {weather &&  <WeatherInfos weather={weather}/>}
-        {weatherForecast &&  <WeatherInfosForecast weatherForecast={weatherForecast}/>}
       </div>
+        {weatherForecast &&  <WeatherInfosForecast weatherForecast={weatherForecast}/>}
+     </>
   )
 }
 
