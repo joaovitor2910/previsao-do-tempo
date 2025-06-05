@@ -40,8 +40,10 @@ function App() {
         <h1>Previsão Do Tempo <br></br> Diária e Semanal</h1>
         <h3>Obtenha a previsão do tempo mais recente para hoje e para os próximos dias com informações
         atualizadas sobre temperatura, umidade e muito mais.</h3>
+        <div className='pesquisa'>
         <input type="text" ref={inputRef} placeholder='Digite o nome da cidade' />
         <button onClick={searchCity}>Buscar</button>
+        </div>
         </div>
 
         {weather &&  <WeatherInfos weather={weather}/>}

@@ -1,4 +1,5 @@
 .weather-container {
+    max-height: 550px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     padding: 50px;
@@ -6,7 +7,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    row-gap: 20px;
+    row-gap: 10px;
 
     h2 {
         font-size: 2rem;
