@@ -2,7 +2,7 @@ import './styles.js'
 import github from '../../assets/github.png'
 import Linkedin from '../../assets/linkedin.png'
 import { Container, Icon, Logo, NavContainer } from './styles.js'
-import imageLogo from '../../assets/favicon-32x32.png'
+import imageLogo from '../../assets/android-chrome-192x192.png'
 
 function Header() {
     return (
