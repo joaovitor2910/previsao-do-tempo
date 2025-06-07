@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +23,9 @@ export const Container = styled.div`
         &:hover {
             color: #ff9800;
         }
+    }
+    @media (max-width: 600px ) {
+        display: none;
     }
 `
 export const NavContainer= styled.nav`

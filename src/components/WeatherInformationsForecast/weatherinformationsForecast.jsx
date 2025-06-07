@@ -1,4 +1,5 @@
-import './weatherinformationsForecast.css'
+import './styles.js'
+import { Container, ForecastDay, ForecastDescription, ForecastInfo, ForecastList } from './styles.js'
 
 function WeatherInfosForecast({ weatherForecast }) {
 
@@ -24,19 +25,19 @@ function WeatherInfosForecast({ weatherForecast }) {
     }
 
     return (
-        <div className='forecast-container'>
+        <Container>
             <h3>Próximos Dias</h3>
-            <div className='forecast-list'>
+            <ForecastList>
                 {next5Days.map(forecast => (
-                    <div className='forecast-info' key={forecast.dt}>
-                        <p className='forecast-day'>{convertDate(forecast)}</p>
+                    <ForecastInfo key={forecast.dt}>
+                        <ForecastDay>{convertDate(forecast)}</ForecastDay>
                         <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`} alt="" />
-                        <p className='forecast-description'>{forecast.weather[0].description}</p>
+                        <ForecastDescription>{forecast.weather[0].description}</ForecastDescription>
                         <p>{Math.round(forecast.main.temp_min)}°C min / {Math.round(forecast.main.temp_max)}°C max</p>
-                    </div>
+                    </ForecastInfo>
                 ))}
-            </div>
-        </div>
+            </ForecastList>
+        </Container>
     )
 }
 
