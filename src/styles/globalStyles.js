@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import Background from '../assets/paisagem.jpg'
 
 export default createGlobalStyle`
 * {
@@ -11,7 +12,7 @@ export default createGlobalStyle`
 body {
     width: 100%;
     font-family: "Roboto", sans-serif;
-    background-image: url('../src/assets/paisagem.jpg') ;
+    background-image: url(${Background}) ;
     color: #333;
     line-height: 1.3;
     background-repeat: no-repeat;
